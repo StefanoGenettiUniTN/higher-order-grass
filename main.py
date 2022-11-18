@@ -53,7 +53,28 @@ for h in myHypergraph.edges():
     mySummary.insertHyperedge(elements)
 
 print(mySummary.summaryHypergraph)
+######################################################
+supernode_c14 = mySummary.getComponentSupernodeId(14)
+print("supernode_c14 = "+str(supernode_c14))
+supernode_c15 = mySummary.getComponentSupernodeId(15)
+print("supernode_c15 = "+str(supernode_c15))
 
+s1 = mySummary.merge(supernode_c14, supernode_c15)
+print("s1 = "+str(s1))
+
+print(" ")
+print("fine merge 1")
+print(" ")
+
+supernode_c16 = mySummary.getComponentSupernodeId(16)
+print("supernode_c16 = "+str(supernode_c16))
+
+s2 = mySummary.merge(s1, supernode_c16)
+print("s2 = "+str(s2))
+
+print(" ")
+print("fine merge 2")
+print(" ")
 ######################################################
 """
 Write the summary on output.txt
@@ -82,9 +103,4 @@ for output_supernode in mySummary.getVertices():
     supernode_obj = mySummary.getSupernode(output_supernode)
     outputFile.write(str(supernode_obj))
     outputFile.write("\n")
-
-
-#for n in mySummary.getVertices():
-#    outputFile.write(str(mySummary.getSupernode(n)))
-#    outputFile.write("\n")
 ######################################################
