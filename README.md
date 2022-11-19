@@ -7,3 +7,7 @@ Given an input graph $H(X,E)$ and integer $k$, find a summary graph $\pmb{S}$ fo
 
 ### Problem 2: k-CGs
 Given an input graph $H(X,E)$ and integer $k$, find a summary graph $\pmb{S}$ for $H$ with supernodes $\pmb{X}$ such that $\mathit{Re(H|\pmb{S})}$ is minimized and for every $X' \in \pmb(X)$ $|X'| \geq k$.
+
+## Contents:
+- `higher_order_grass.py`: in this file we provide our implementation proposal for the algorithms proposed by LeFevre and Terzi applied in the context of higher order interactions
+  - `k-Gs greedy`: baseline *Greedy* algorithm
