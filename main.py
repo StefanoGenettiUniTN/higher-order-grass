@@ -3,6 +3,19 @@ import matplotlib.pyplot as plt
 import networkx as nx
 import hypernetx as hnx
 import summary
+from itertools import combinations
+from higher_order_grass import kgs_greedy
+
+#Unfortunately it seems that hypernetx does not allow
+#to compute in constant time the adjacency between two
+#nodes in the hypergraph. In this work the adjacency
+#between two nodes is the number of hyperedges shared
+#between the two nodes. As a result we instantiate this
+#additional structure "component_adj" which is a
+#dictionary of dictionaries such that:
+# component_adj[5][2] = adjacency degree between node
+#                       5 and node 2
+component_adj = dict()
 
 ######################################################
 """
@@ -29,7 +42,27 @@ for i in range(card_x):
 
 myHypergraph = hnx.Hypergraph(input_hypergraph)
 
-print(myHypergraph)
+#print(myHypergraph)
+
+##Initialize component_adj
+for node in myHypergraph.nodes:
+    component_adj[node] = dict()
+
+for edge in myHypergraph.edges():
+    edge_node_set = edge.elements.keys()
+    possibleNodeCouples = combinations(edge_node_set, 2)
+    for couple in possibleNodeCouples:
+        if couple[1] in component_adj[couple[0]]:
+            component_adj[couple[0]][couple[1]] += 1
+        else:
+            component_adj[couple[0]][couple[1]] = 1
+        
+        if couple[0] in component_adj[couple[1]]:
+            component_adj[couple[1]][couple[0]] += 1
+        else:
+            component_adj[couple[1]][couple[0]] = 1
+
+##...end initialize component_adj
 
 ######################################################
 """
@@ -52,29 +85,11 @@ for h in myHypergraph.edges():
     
     mySummary.insertHyperedge(elements)
 
-print(mySummary.summaryHypergraph)
+#print(mySummary.summaryHypergraph)
 ######################################################
-supernode_c14 = mySummary.getComponentSupernodeId(14)
-print("supernode_c14 = "+str(supernode_c14))
-supernode_c15 = mySummary.getComponentSupernodeId(15)
-print("supernode_c15 = "+str(supernode_c15))
 
-s1 = mySummary.merge(supernode_c14, supernode_c15)
-print("s1 = "+str(s1))
+kgs_greedy(myHypergraph, component_adj, mySummary, 3)
 
-print(" ")
-print("fine merge 1")
-print(" ")
-
-supernode_c16 = mySummary.getComponentSupernodeId(16)
-print("supernode_c16 = "+str(supernode_c16))
-
-s2 = mySummary.merge(s1, supernode_c16)
-print("s2 = "+str(s2))
-
-print(" ")
-print("fine merge 2")
-print(" ")
 ######################################################
 """
 Write the summary on output.txt
