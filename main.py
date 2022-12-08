@@ -8,6 +8,7 @@ from higher_order_grass import kgs_greedy
 from higher_order_grass import kgs_sample_pairs_constant
 from higher_order_grass import kgs_sample_pairs_proportional
 from higher_order_grass import kgs_linear_check
+from higher_order_grass import kcgs_condense
 
 #Unfortunately it seems that hypernetx does not allow
 #to compute in constant time the adjacency between two
@@ -94,7 +95,8 @@ for h in myHypergraph.edges():
 #kgs_greedy(component_adj, mySummary, 3)
 #kgs_sample_pairs_constant(component_adj, mySummary, 3, 2)
 #kgs_sample_pairs_proportional(component_adj, mySummary, 3, 0.5)
-kgs_linear_check(component_adj, mySummary, 3)
+#kgs_linear_check(component_adj, mySummary, 3)
+kcgs_condense(component_adj, mySummary, 3)
 
 ######################################################
 """

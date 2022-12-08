@@ -1,32 +1,30 @@
 HYPEREDGES
 ID: 9
-Components: [ 17(2) 21(2) ]
+Components: [ 20(1) 22(3) ]
 ID: 10
-Components: [ 17(1) 22(1) ]
-ID: 11
-Components: [ 17(1) 21(1) ]
+Components: [ 20(1) 22(1) ]
 ID: 16
-Components: [ 21(1) 22(2) ]
+Components: [ 18(2) 22(1) ]
 ---
 SUPERNODES
-supernode [17] 
- cardinality: 2 
- connected to (id, number_of_edges): [(21, 5), (22, 1)] 
- components: {8, 10} 
+supernode [18] 
+ cardinality: 3 
+ connected to (id, number_of_edges): [(22, 2)] 
+ components: {16, 14, 15} 
+ internal edges: 4 
+ intersection profile: [(16, 2)] 
+ components: {16, 14, 15}
+supernode [20] 
+ cardinality: 3 
+ connected to (id, number_of_edges): [(22, 4)] 
+ components: {8, 12, 13} 
  internal edges: 1 
- intersection profile: [(9, 2), (10, 1), (11, 1)] 
- components: {8, 10}
-supernode [21] 
- cardinality: 2 
- connected to (id, number_of_edges): [(17, 5), (22, 2)] 
- components: {9, 11} 
- internal edges: 1 
- intersection profile: [(9, 2), (11, 1), (16, 1)] 
- components: {9, 11}
+ intersection profile: [(10, 1), (9, 1)] 
+ components: {8, 12, 13}
 supernode [22] 
- cardinality: 5 
- connected to (id, number_of_edges): [(21, 2), (17, 1)] 
- components: {12, 13, 14, 15, 16} 
- internal edges: 5 
- intersection profile: [(16, 2), (10, 1)] 
- components: {12, 13, 14, 15, 16}
+ cardinality: 3 
+ connected to (id, number_of_edges): [(18, 2), (20, 4)] 
+ components: {9, 10, 11} 
+ internal edges: 4 
+ intersection profile: [(9, 3), (16, 1), (10, 1)] 
+ components: {9, 10, 11}
