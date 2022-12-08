@@ -1,30 +1,83 @@
 HYPEREDGES
-ID: 9
-Components: [ 20(1) 22(3) ]
-ID: 10
-Components: [ 20(1) 22(1) ]
-ID: 16
-Components: [ 18(2) 22(1) ]
+ID: 80
+Components: [ 148(32) 152(5) 153(3) ]
+ID: 81
+Components: [ 105(3) 149(1) 150(2) 151(1) 152(5) 153(2) ]
+ID: 82
+Components: [ 144(10) 145(11) 150(2) 151(6) 152(5) 153(1) ]
+ID: 83
+Components: [ 144(10) 145(11) 150(1) 152(5) 154(6) ]
+ID: 84
+Components: [ 145(11) 149(2) 150(1) 152(4) 154(2) ]
 ---
 SUPERNODES
-supernode [18] 
+supernode [105] 
  cardinality: 3 
- connected to (id, number_of_edges): [(22, 2)] 
- components: {16, 14, 15} 
- internal edges: 4 
- intersection profile: [(16, 2)] 
- components: {16, 14, 15}
-supernode [20] 
- cardinality: 3 
- connected to (id, number_of_edges): [(22, 4)] 
- components: {8, 12, 13} 
+ connected to (id, number_of_edges): [(149, 3), (150, 6), (151, 3), (152, 15), (153, 6)] 
+ components: {'MI', 'LL', 'GR'} 
+ internal edges: 3 
+ intersection profile: [(81, 3)] 
+ components: {'MI', 'LL', 'GR'}
+supernode [144] 
+ cardinality: 10 
+ connected to (id, number_of_edges): [(145, 220), (150, 30), (151, 60), (152, 100), (153, 10), (154, 60)] 
+ components: {'MO', 'BA', 'GU', 'JP', 'MM', 'TG', 'PL', 'BB', 'MN', 'QU'} 
+ internal edges: 90 
+ intersection profile: [(82, 10), (83, 10)] 
+ components: {'MO', 'BA', 'GU', 'JP', 'MM', 'TG', 'PL', 'BB', 'MN', 'QU'}
+supernode [145] 
+ cardinality: 11 
+ connected to (id, number_of_edges): [(144, 220), (149, 22), (150, 44), (151, 66), (152, 154), (153, 11), (154, 88)] 
+ components: {'GA', 'MA', 'GI', 'MG', 'JO', 'FE', 'GT', 'CR', 'CM', 'BO', 'EN'} 
+ internal edges: 165 
+ intersection profile: [(82, 11), (83, 11), (84, 11)] 
+ components: {'GA', 'MA', 'GI', 'MG', 'JO', 'FE', 'GT', 'CR', 'CM', 'BO', 'EN'}
+supernode [148] 
+ cardinality: 32 
+ connected to (id, number_of_edges): [(152, 160), (153, 96)] 
+ components: {'CN', 'LI', 'ZE', 'FA', 'SN', 'FV', 'GG', 'MC', 'BR', 'CH', 'FN', 'ME', 'CV', 'BL', 'SS', 'CL', 'SC', 'GE', 'MY', 'BM', 'MB', 'CC', 'IS', 'JU', 'PO', 'JL', 'DA', 'MT', 'VI', 'MR', 'PG', 'SP'} 
+ internal edges: 496 
+ intersection profile: [(80, 32)] 
+ components: {'CN', 'LI', 'ZE', 'FA', 'SN', 'FV', 'GG', 'MC', 'BR', 'CH', 'FN', 'ME', 'CV', 'BL', 'SS', 'CL', 'SC', 'GE', 'MY', 'BM', 'MB', 'CC', 'IS', 'JU', 'PO', 'JL', 'DA', 'MT', 'VI', 'MR', 'PG', 'SP'}
+supernode [149] 
+ cardinality: 2 
+ connected to (id, number_of_edges): [(105, 3), (145, 22), (150, 4), (151, 1), (152, 13), (153, 2), (154, 4)] 
+ components: {'BS', 'BZ'} 
  internal edges: 1 
- intersection profile: [(10, 1), (9, 1)] 
- components: {8, 12, 13}
-supernode [22] 
+ intersection profile: [(81, 1), (84, 2)] 
+ components: {'BS', 'BZ'}
+supernode [150] 
+ cardinality: 2 
+ connected to (id, number_of_edges): [(105, 6), (144, 30), (145, 44), (149, 4), (151, 14), (152, 29), (153, 6), (154, 8)] 
+ components: {'AZ', 'EP'} 
+ internal edges: 2 
+ intersection profile: [(81, 2), (82, 2), (84, 1), (83, 1)] 
+ components: {'AZ', 'EP'}
+supernode [151] 
+ cardinality: 6 
+ connected to (id, number_of_edges): [(105, 3), (144, 60), (145, 66), (149, 1), (150, 14), (152, 35), (153, 8)] 
+ components: {'MP', 'MV', 'JD', 'BT', 'GP', 'BU'} 
+ internal edges: 15 
+ intersection profile: [(81, 1), (82, 6)] 
+ components: {'MP', 'MV', 'JD', 'BT', 'GP', 'BU'}
+supernode [152] 
+ cardinality: 5 
+ connected to (id, number_of_edges): [(105, 15), (144, 100), (145, 154), (148, 160), (149, 13), (150, 29), (151, 35), (153, 30), (154, 38)] 
+ components: {'CO', 'JV', 'TH', 'TM', 'JA'} 
+ internal edges: 46 
+ intersection profile: [(80, 5), (81, 5), (82, 5), (83, 5), (84, 4)] 
+ components: {'CO', 'JV', 'TH', 'TM', 'JA'}
+supernode [153] 
  cardinality: 3 
- connected to (id, number_of_edges): [(18, 2), (20, 4)] 
- components: {9, 10, 11} 
+ connected to (id, number_of_edges): [(144, 10), (145, 11), (148, 96), (150, 6), (151, 8), (152, 30), (105, 6), (149, 2)] 
+ components: {'FT', 'FF', 'NP'} 
  internal edges: 4 
- intersection profile: [(9, 3), (16, 1), (10, 1)] 
- components: {9, 10, 11}
+ intersection profile: [(80, 3), (82, 1), (81, 2)] 
+ components: {'FT', 'FF', 'NP'}
+supernode [154] 
+ cardinality: 6 
+ connected to (id, number_of_edges): [(144, 60), (145, 88), (149, 4), (150, 8), (152, 38)] 
+ components: {'TS', 'HL', 'LP', 'XA', 'XB', 'BJ'} 
+ internal edges: 16 
+ intersection profile: [(83, 6), (84, 2)] 
+ components: {'TS', 'HL', 'LP', 'XA', 'XB', 'BJ'}
